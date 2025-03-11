@@ -3,25 +3,25 @@ body {
     margin: 0;
 }
 
-.section-accueille {
-    width: 100%;
+.section-accueil {
     background-color: black;
-    height: 900px;
     position: fixed;
+    width: 100%;
+    height: 900px;
     border-top: 1.5px solid white;
     margin-top: 55px;
 }
 
 .section-texte {
+    background-color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 950px;
-    padding-top: 80px;
-    background-color: white;
     position: absolute;
+    height: 950px;
     width: 100%;
+    padding-top: 80px;
     top: 1000px; 
 }
 
@@ -32,8 +32,7 @@ h1 {
     color: white;
     font-size: 100px;
     height: 10px;
-    padding-top: 50px;
-    position: relative;
+    padding-top: 40px;
 }
 
 h2 {
@@ -43,7 +42,6 @@ h2 {
     color: white;
     font-size: 50px;
     font-style: italic;
-    position: relative;
 }
 
 h2:hover {
@@ -51,8 +49,7 @@ h2:hover {
     cursor: default; 
     font-size: 250px;
     margin-bottom: 370px;
-    animation: prenom 2s ease-in-out ;
-    
+    animation: prenom 2s ease-in-out ; 
 }
 
 @keyframes prenom {
@@ -110,14 +107,12 @@ h2:hover {
 .logo {
     display: flex;
     justify-content: center;
-    padding-top: 120px;
-    gap: 100px;
+    padding-top: 85px;
+    gap: 110px;
 }
 
 .logo img {
-    display: flex;
-    justify-content: center;
-    height: 70px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid white; 
@@ -126,9 +121,9 @@ h2:hover {
 
 .logo img:hover {
     cursor: pointer;
-    filter: blur(1px); 
-    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out; 
+    filter: blur(1.3px); 
     transform: scale(1.2); 
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out; 
 }
 
 .logo img:active {
@@ -136,13 +131,37 @@ h2:hover {
     transition: transform 0.1s ease-in-out; 
 }
 
+.Nom {
+    opacity: 0;
+    animation: fadeIn 3s forwards; 
+}
+
+.photo {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 1s; 
+}
+
+.logo {
+    opacity: 0;
+    animation: fadeIn 3s forwards;    
+    animation-delay: 2s; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .texte {
     height: 800px;
 }
 
 h3 {
-    justify-content: center;
-    display: flex;
     font-family: "Raleway", sans-serif;
     font-weight: 300;
     font-size: 50px;
@@ -155,38 +174,49 @@ h3 {
 }
 
 li {
-    justify-content: flex-start;
     display: flex;
+    justify-content: flex-start;
     font-family: "Raleway", sans-serif;
     font-weight: 230;
     font-size: 35px;
     color: black;
     margin-bottom: 50px; 
-    padding-left: 340px;
+    padding-left: 280px;
 }
 
 @media (max-width: 1600px) {
 
-    .sommaire {
-        height: 750px;   
-    }
-    h1, h2 {
-        margin-top: 10px;
-    }
-    .photo {
-        padding-top: 5px;
-    }
-    .logo{
-        padding-top: 50px;
-    }
-    h2:hover {
-        height: 150px;
-        margin-top: 70px; 
-    }
-    h3 {
-        font-size: 40px;
-    }
-    li {
-        padding-left: 200px;
-    }
+.section-texte {
+    height: 750px;   
+}
+
+h1, h2 {
+    margin-top: 20px;
+}
+
+.photo {
+    padding-top: 5px;
+}
+
+.logo {
+    padding-top: 50px;
+}
+
+.logo img {
+    height: 75px;
+}
+
+h2:hover {
+    height: 150px;
+    margin-top: 70px; 
+}
+
+h3 {
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+li {
+    padding-left: 200px;
+}
 }
