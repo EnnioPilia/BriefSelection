@@ -126,6 +126,11 @@ h2:hover {
     transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out; 
 }
 
+.logo img:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.7s ease-in-out; 
+}
+
 .logo img:active {
     transform: scale(0.1); 
     transition: transform 0.1s ease-in-out; 
