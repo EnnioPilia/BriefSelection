@@ -77,6 +77,11 @@ body {
     }
 }
 
+#description{
+    font-size: 29px; 
+    text-align: center; 
+}
+
 #description img {
     width: 100px; 
     height: 100px;
