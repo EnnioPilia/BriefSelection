@@ -6,8 +6,8 @@ body {
 .section-accueil {
     background-color: black;
     position: fixed;
-    width: 100%;
     height: 900px;
+    width: 100%;
     border-top: 1.5px solid white;
     margin-top: 55px;
 }
@@ -23,6 +23,14 @@ body {
     width: 100%;
     padding-top: 80px;
     top: 1000px; 
+}
+
+.Nom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 260px;
 }
 
 h1 {
@@ -49,7 +57,7 @@ h2:hover {
     cursor: default; 
     font-size: 250px;
     margin-bottom: 370px;
-    animation: prenom 2s ease-in-out ; 
+    animation: prenom 2s ease-in-out; 
 }
 
 @keyframes prenom {
@@ -67,19 +75,10 @@ h2:hover {
     }
 }
 
-.Nom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 260px;
-}
-
 .photo {
     display: flex;
     justify-content: center;
     height: 220px;
-    border-radius: 50%;
     padding-top: 50px; 
 }
 
@@ -113,7 +112,7 @@ h2:hover {
 }
 
 .logo li {
-    padding: 55px;
+    padding: 65px;
 }
 
 .logo img {
@@ -141,6 +140,15 @@ h2:hover {
     transition: transform 0.1s ease-in-out; 
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .Nom {
     opacity: 0;
     animation: fadeIn 3s forwards; 
@@ -156,15 +164,6 @@ h2:hover {
     opacity: 0;
     animation: fadeIn 3s forwards;    
     animation-delay: 2s; 
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .texte {
@@ -184,14 +183,14 @@ h3 {
 }
 
 li {
+    font-family: "Raleway", sans-serif;
     display: flex;
     justify-content: flex-start;
-    font-family: "Raleway", sans-serif;
     font-weight: 230;
-    font-size: 35px;
+    font-size: 37px;
     color: black;
     margin-bottom: 50px; 
-    padding-left: 280px;
+    padding-left: 240px;
 }
 
 @media (max-width: 1600px) {
@@ -208,8 +207,8 @@ h1, h2 {
     padding-top: 5px;
 }
 
-.logo li {
-    padding-top: 40px;
+.logo ul {
+    padding-top: 5px;
 }
 
 .logo img {
@@ -224,9 +223,10 @@ h2:hover {
 h3 {
     font-size: 40px;
     padding-bottom: 30px;
+    padding-left: 70px;
 }
 
 li {
-    padding-left: 200px;
+    padding-left: 150px;
 }
 }
